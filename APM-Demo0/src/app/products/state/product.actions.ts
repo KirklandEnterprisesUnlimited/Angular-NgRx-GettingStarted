@@ -1,3 +1,5 @@
-export class ProductActions {
-    toggleProductCode: string = '[Product] Toggle Product Code';
-}
+// ACTIONS
+
+import { createAction } from "@ngrx/store";
+
+export const toggleProductCode = createAction('[Product] Toggle Product Code');
