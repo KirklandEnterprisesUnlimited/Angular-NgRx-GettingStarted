@@ -1,4 +1,4 @@
-import { createAction, createReducer, on } from "@ngrx/store";
+import { createAction, createFeatureSelector, createReducer, createSelector, on } from "@ngrx/store";
 import { User } from "../user";
 import * as AppState from '../../state/app.state';
 
@@ -25,3 +25,7 @@ state => {
         maskUserName: !state.maskUserName
     }
 }))
+
+// SELECTORS
+const getUserSlice = createFeatureSelector<UserState>('user');
+export const getMaskUserName = createSelector(getUserSlice, state => state.maskUserName);
