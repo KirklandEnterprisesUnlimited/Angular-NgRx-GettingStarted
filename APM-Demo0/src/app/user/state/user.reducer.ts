@@ -29,3 +29,4 @@ state => {
 // SELECTORS
 const getUserSlice = createFeatureSelector<UserState>('user');
 export const getMaskUserName = createSelector(getUserSlice, state => state.maskUserName);
+export const getCurrentUser = createSelector(getUserSlice, state => state.currentUser);
