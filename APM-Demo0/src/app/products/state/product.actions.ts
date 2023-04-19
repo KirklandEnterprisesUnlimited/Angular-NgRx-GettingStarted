@@ -10,6 +10,15 @@ export const setCurrentProduct = createAction('[Product] Set Current Product',
 props<{ product: Product }>());
 
 // API
+export const loadProducts = createAction('[Product] Load all products');
+export const loadProductsSuccess = createAction(
+    '[Product] Loaded all products successfully',
+    props<{ products: Product[] }>()
+);
+export const loadProductsFailure = createAction(
+    '[Product] Load products failed',
+    props<{ errorMessage: string }>()
+)
 
 // VOID
 export const toggleProductCode = createAction('[Product] Toggle Product Code');
